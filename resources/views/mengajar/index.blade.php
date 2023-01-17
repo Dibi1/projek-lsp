@@ -2,36 +2,30 @@
 @section('content')
    <center>
           <b>
-            <h2>LIST DATA SISWA</h2>
-            <a href="/siswa/create" class="button-primary">TAMBAH DATA </a>
+            <h2>LIST DATA MENGAJAR</h2>
+            <a href="/mengajar/create" class="button-primary">TAMBAH DATA </a>
             <table cellPadding="18">
                  <tr>
                      <th>NO</th>
-                     <th>NIS</th>
-                     <th>NAMA SISWA</th>
-                     <th>JENIS KELAMIN</th>
-                     <th>ALAMAT</th>
+                     <th>GURU</th>
+                     <th>MATA PELAJARAN</th>
                      <th>KELAS</th>
-                     <th>PASSWORD</th>
                      <th>ACTION</th>
                  </tr>
-                 @foreach($siswa as $s)
+                 @foreach($mengajar as $meng)
                    <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $s->nis }}</td>
-                        <td>{{ $s->nama_siswa }}</td>
-                        <td>{{ $s->jk == 'L' ? 'Laki-laki' : 'Perempuan' }}</td>
-                        <td>{{ $s->alamat }}</td>
-                        <td>{{ $s->kelas->nama_kelas }}</td>
-                        <td>{{ $s->password }}</td>
+                        <td>{{ $meng->guru->nama_guru }}</td>
+                        <td>{{ $meng->mapel->nama_mapel }}</td>
+                        <td>{{ $meng->kelas->nama_kelas }}</td>
                         <td>
-                            <a href="/siswa/edit/
-                            {{ $s->id }}"
+                            <a href="/mengajar/edit/
+                            {{ $meng->id }}"
                             class="button-warning">
                                 EDIT
                             </a>
 
-                            <a href="/siswa/destroy/{{ $s->id }}"
+                            <a href="/mengajar/destroy/{{ $meng->id }}"
                                 class="button-danger"
                                 onclick="return confirm 
                                 ('Yakin Hapus?')">
