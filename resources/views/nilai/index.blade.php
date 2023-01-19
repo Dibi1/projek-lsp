@@ -20,7 +20,7 @@
                      <th>UAS</th>
                      <th>NA</th>
                      {{-- @if (session('user')->role == 'guru') --}}
-                         <td>ACTION</td>
+                     <th>ACTION</th>
                      {{-- @endif  --}}
                  </tr>
                  @foreach($nilai as $each)

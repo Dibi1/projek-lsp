@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/home',[IndexController::class,'home']);
+Route::get('/Home',[IndexController::class,'Home']);
 
 Route::prefix('/guru')->group(function() {
 Route::get('/index', [GuruController::class,'index']);
