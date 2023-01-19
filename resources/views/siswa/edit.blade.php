@@ -19,8 +19,8 @@
                     </tr>
                     <tr>
                         <td width="25%">JENIS KELAMIN</td>
-                        <td width="25%"><input type="radio" name="jk" value="L {{ $siswa->jk == 'L' ? 'checked' : '' }}">Laki-laki</td>
-                        <td width="25%"><input type="radio" name="jk" value="P {{ $siswa->jk == 'P' ? 'checked' : '' }}">Perempuan</td>                
+                        <td width="25%"><input type="radio" name="jk" value="L"{{ $siswa->jk == 'L' ? 'checked' : '' }}>Laki-laki</td>
+                        <td width="25%"><input type="radio" name="jk" value="P"{{ $siswa->jk == 'P' ? 'checked' : '' }}>Perempuan</td>                
                     </tr>
                     <tr>
                         <td width="25%">ALAMAT</td>

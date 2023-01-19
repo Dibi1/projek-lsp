@@ -7,9 +7,9 @@
                 <a href="/nilai/create" class="button-primary">TAMBAH DATA</a>
             {{-- @endif --}}
 
-            {{-- @if (session('success')) --}}
-               {{-- <p class="text-success">{{ session('success') }}</p> --}}
-            {{-- @endif --}}
+            @if (session('success'))
+               <p class="text-success">{{ session('success') }}</p>
+            @endif
             <table cellPadding="18">
                  <tr>
                      <th>NO</th>

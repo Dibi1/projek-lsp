@@ -112,7 +112,7 @@ class SiswaController extends Controller
     {
         $nilai = Nilai::where('siswa_id', $siswa->id)->first();        
         if($nilai){
-            return back()->with('eror', "$siswa->nama_siswa masih digunakan di menu nilai");
+            return back()->with('error', "$siswa->nama_siswa masih digunakan di menu nilai");
         }
 
         $siswa->delete();

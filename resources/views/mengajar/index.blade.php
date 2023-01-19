@@ -4,6 +4,12 @@
           <b>
             <h2>LIST DATA MENGAJAR</h2>
             <a href="/mengajar/create" class="button-primary">TAMBAH DATA </a>
+            @if (session('success'))
+            <p class="text-success">{{ session('success') }}</p>
+            @endif
+            @if (session('error'))
+            <p class="text-danger">{{ session('eror') }}</p>
+            @endif
             <table cellPadding="18">
                  <tr>
                      <th>NO</th>

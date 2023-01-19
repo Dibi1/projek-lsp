@@ -100,7 +100,7 @@ class MapelController extends Controller
         $mengajar = Mengajar::where('mapel_id', $mapel->id)->first();
 
         if($mengajar){
-            return back()->with('eror', "$mapel->nama_mapel masih digunakan di menu mengajar");
+            return back()->with('error', "$mapel->nama_mapel masih digunakan di menu mengajar");
         }
 
         $mapel->delete();

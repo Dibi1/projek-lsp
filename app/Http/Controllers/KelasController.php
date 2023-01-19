@@ -107,11 +107,11 @@ class KelasController extends Controller
         $mengajar = Mengajar::where('kelas_id', $kelas->id)->first();
         
         if($siswa){
-            return back()->with('eror', "$kelas->nama_kelas masih digunakan di jurusan lain");
+            return back()->with('error', "$kelas->nama_kelas masih digunakan di jurusan lain");
         }
 
         if($mengajar){
-            return back()->with('eror', "$kelas->nama_kelas masih digunakan di jurusan lain");
+            return back()->with('error', "$kelas->nama_kelas masih digunakan di jurusan lain");
         }
 
         $kelas->delete();

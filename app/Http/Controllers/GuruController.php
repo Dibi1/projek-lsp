@@ -108,7 +108,7 @@ class GuruController extends Controller
         $mengajar = Mengajar::where('guru_id', $guru->id)->first();
 
         if($mengajar){
-            return back()->with('eror', "$guru->nama_guru masih digunakan di menu mengajar");
+            return back()->with('error', "$guru->nama_guru masih digunakan di menu mengajar");
         }
 
         $guru->delete();

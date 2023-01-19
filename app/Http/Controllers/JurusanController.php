@@ -99,7 +99,7 @@ class JurusanController extends Controller
         $kelas = Kelas::where('jurusan_id', $jurusan->id)->first();
 
         if($kelas){
-            return back()->with('eror', "$jurusan->nama_jurusan masih digunakan di kelas lain");
+            return back()->with('error', "$jurusan->nama_jurusan masih digunakan di kelas lain");
         }
 
         $jurusan->delete();
