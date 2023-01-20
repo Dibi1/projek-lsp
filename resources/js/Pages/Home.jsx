@@ -1,11 +1,11 @@
-import { usepage } from "@inertiajs/inertia-react";
+import { usePage } from "@inertiajs/inertia-react";
 import React from "react";
 import "../../css/style.css";
 import Layout from "../Pages/Main/Layout.jsx";
 
 const Home = () => {
-    // const { user } = usePage().props.auth;
-    // console.log("USER", user);
+    const { user } = usePage().props.auth;
+    console.log("USER", user);
     return (
         <>
            <Layout>
@@ -13,7 +13,7 @@ const Home = () => {
                     <b>
                         <br />
                         SELAMAT DATANG USER DENGAN AKSES MASUK{" "}
-                        {/* {user.kode_admin ?? user.nis ?? user.nip} */}
+                        {user?.id_admin ?? user?.nis ?? user?.nip}
                     </b>
                  </center>
 

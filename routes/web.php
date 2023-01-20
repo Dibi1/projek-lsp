@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/Home',[IndexController::class,'Home']);
+Route::get('/home',[IndexController::class,'Home']);
 
 Route::prefix('/guru')->group(function() {
 Route::get('/index', [GuruController::class,'index']);
@@ -105,4 +105,12 @@ Route::prefix('/jurusan')->group(function() {
                         Route::post('/update/{nilai}', [NilaiController::class,'update']);
                         Route::get('/destroy/{nilai}', [NilaiController::class,'destroy']);
                         });    
+
+                        Route::get('/', [IndexController::class,'index']);
+                        Route::post('/login/admin', [IndexController::class,'loginAdmin']);
+                        Route::post('/login/siswa', [IndexController::class,'loginSiswa']);
+                        Route::post('/login/guru', [IndexController::class,'loginGuru']);
+                        Route::get('/Home', [IndexController::class,'home']);
+                        Route::get('/logout', [IndexController::class,'logout']);
+                                                
 require __DIR__.'/auth.php';
